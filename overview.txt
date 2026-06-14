@@ -1,0 +1,18 @@
+Project Title: NexusArena - Competitive Esports Tournament Platform
+
+Client: NexusArena Pvt. Ltd.
+
+Industry: Online Gaming and Esports
+
+Project Type: Web Platform Development
+
+Overview:
+NexusArena is a competitive esports tournament management platform designed for amateur and semi-professional gaming communities. The platform allows players to register accounts, browse open tournaments across multiple game titles, join or host tournaments, track live match results, and follow dynamic leaderboards and bracket progressions in real time.
+
+The platform targets three primary user types: players who want to compete in organised online tournaments, tournament organisers who want to create and manage structured competitions, and spectators who want to follow live brackets and results without participating.
+
+NexusArena must support a minimum of five popular game titles at launch including Valorant, FIFA, Chess, Call of Duty, and Clash Royale. Each game title has its own tournament section with dedicated leaderboards, active tournaments, and past results.
+
+The platform must be fully responsive and accessible on desktop and mobile browsers without requiring a native app installation. All core tournament features including registration, bracket generation, match result submission, and leaderboard updates must function within the web interface.
+
+The final deliverable is a fully functional, publicly accessible web platform built to the specifications defined in the scope of work, instructions, and rubrics documents included in this package.

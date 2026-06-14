@@ -1,0 +1,64 @@
+Project: NexusArena - Competitive Esports Tournament Platform
+Organisation: NexusArena Pvt. Ltd.
+Category: Web Development
+
+R1 - The deployed public URL loads the NexusArena homepage without errors in Chrome latest.
+R2 - The GitHub repository is public and accessible without login.
+R3 - The GitHub repository contains both frontend and backend source code.
+R4 - User registration form collects username, email, and password as mandatory fields.
+R5 - Email verification is triggered on account creation and unverified accounts cannot join or create tournaments.
+R6 - Login uses email and password with JWT-based session management.
+R7 - Password reset is delivered via email link that expires after 24 hours.
+R8 - User profile page displays username, avatar, game titles followed, tournaments joined, win count, loss count, and leaderboard rank per game title.
+R9 - Avatar upload rejects files larger than 2 MB with an error message.
+R10 - Avatar upload rejects files that are not PNG or JPG with an error message.
+R11 - Homepage displays a Featured Tournaments section showing a maximum of 3 tournament cards.
+R12 - Homepage displays a Recently Added Tournaments section showing a maximum of 6 tournament cards.
+R13 - Homepage displays an Active Tournaments section showing a maximum of 6 tournament cards.
+R14 - Tournament filter functions by game title dropdown with all five supported titles as options.
+R15 - Tournament filter functions by status with options for open, ongoing, and completed.
+R16 - Tournament filter functions by format with options for single elimination, double elimination, and round robin.
+R17 - Tournament search returns results matching the tournament name including partial matches.
+R18 - Tournament detail page displays game title, tournament name, format, registration deadline, start date, slot count, current registration count, and rules text.
+R19 - Tournament registration closes automatically when the slot limit is reached and the Register button is replaced with a Closed label.
+R20 - Tournament registration closes automatically when the registration deadline passes and the Register button is replaced with a Closed label.
+R21 - A confirmation email is sent to the player within 5 minutes of successful tournament registration.
+R22 - A Withdraw button appears on the tournament detail page for tournaments the logged-in player has joined and disappears after the registration deadline passes.
+R23 - Tournament creation form includes all mandatory fields: game title, tournament name, format, slot limit, registration deadline, start date, and rules.
+R24 - Tournament name field enforces a maximum of 60 characters.
+R25 - Slot limit field enforces a minimum of 4 and a maximum of 128.
+R26 - Prize pool field accepts only numeric values greater than zero when entered.
+R27 - Organisers can edit tournament name, rules, and prize pool before the registration deadline.
+R28 - Game title, format, and slot limit cannot be edited after tournament creation.
+R29 - Tournament cancellation before the start date triggers an email notification to all registered players.
+R30 - Bracket generation is triggered manually by the organiser after the registration deadline closes.
+R31 - Single elimination bracket is generated correctly from the registered player list.
+R32 - Double elimination bracket is generated correctly from the registered player list.
+R33 - Round robin bracket pairs every registered player against every other registered player once.
+R34 - Byes are assigned randomly when the registered player count is not a power of 2 for single or double elimination formats.
+R35 - The bracket diagram displays as an interactive visual tree on the tournament detail page showing all rounds.
+R36 - The bracket diagram updates within 30 seconds of a match result being submitted by the organiser.
+R37 - A leaderboard page exists for each of the five supported game titles: Valorant, FIFA, Chess, Call of Duty, and Clash Royale.
+R38 - Leaderboard entries are ranked by total tournament wins descending with ties broken by total matches played descending.
+R39 - Each leaderboard row displays rank number, player avatar, username, total wins, and total matches played.
+R40 - Leaderboard data updates within 5 minutes of a tournament result being finalised.
+R41 - Leaderboard displays a minimum of 50 rows per page with pagination for additional entries.
+R42 - Email notifications are sent for registration confirmation, tournament start, match result submission, and tournament completion.
+R43 - An in-platform notification bell icon displays the count of unread notifications as a badge.
+R44 - A notification history page lists all past notifications for the logged-in user in reverse chronological order.
+R45 - The admin panel is inaccessible to non-admin users and redirects to the homepage on access attempt.
+R46 - The admin panel displays a user table with columns for username, email, registration date, and account status.
+R47 - Admins can suspend or delete any user account from the user table.
+R48 - Admins can view and remove any tournament from the tournament management table.
+R49 - The admin dashboard displays total registered users, total tournaments created, and total matches completed as integer values.
+R50 - All pages render without horizontal scrolling at 375 x 812 screen width.
+R51 - All pages render without horizontal scrolling at 768 x 1024 screen width.
+R52 - All pages render without horizontal scrolling at 1920 x 1080 screen width.
+R53 - The source code frontend folder contains src, components, pages, utils, and public subdirectories.
+R54 - The source code backend folder contains routes, controllers, models, middleware, and server.js.
+R55 - README.md contains the project title, tech stack, local setup instructions, environment variable list, and deployed URL.
+R56 - No console errors appear on the homepage in Chrome latest.
+R57 - No console errors appear on the tournament list page in Chrome latest.
+R58 - No console errors appear on any leaderboard page in Chrome latest.
+R59 - The platform does not include native mobile app builds, live video streaming, in-platform chat, payment gateway integration, or third-party game API connections.
+R60 - All source functions contain inline comments explaining their purpose.

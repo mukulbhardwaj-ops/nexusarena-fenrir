@@ -1,0 +1,96 @@
+Project: NexusArena - Competitive Esports Tournament Platform
+Scope of Work
+
+The following sections define the complete scope of work for the NexusArena web platform. All items listed below are in scope unless explicitly excluded.
+
+1. User Authentication and Account Management
+- User registration with email and password.
+- Email verification on account creation.
+- Login and logout functionality.
+- Password reset via email link that expires after 24 hours.
+- User profile page showing username, game titles followed, tournaments joined, win/loss record, and rank.
+- Profile avatar upload with a maximum file size of 2 MB and PNG or JPG format only.
+
+2. Tournament Discovery and Browsing
+- Homepage displaying a Featured Tournaments section showing a maximum of 3 tournament cards, a Recently Added Tournaments section showing a maximum of 6 tournament cards, and an Active Tournaments section showing a maximum of 6 tournament cards.
+- Tournament filter by game title, status (open, ongoing, completed), and format (single elimination, double elimination, round robin).
+- Tournament search by name including partial name matches.
+- Individual tournament detail page showing game title, format, prize pool (display only), registration deadline, start date, number of slots, current registrations, rules, and bracket.
+
+3. Tournament Registration
+- Players can register for any open tournament from the tournament detail page.
+- Registration closes automatically when the slot limit is reached or the registration deadline passes. The Register button is replaced with a Closed label in both cases.
+- Players receive an email confirmation within 5 minutes of successful tournament registration.
+- Players can withdraw from a tournament before the registration deadline. The Withdraw button disappears after the registration deadline passes.
+
+4. Tournament Creation and Management (Organiser Role)
+- Registered users can create a new tournament by specifying game title, tournament name, format, slot limit, registration deadline, start date, rules, and optional prize pool (display field only — no payment processing is required).
+- Tournament name field enforces a maximum of 60 characters.
+- Slot limit field enforces a minimum of 4 and a maximum of 128.
+- Prize pool field accepts only numeric values greater than zero when entered.
+- Organisers can edit tournament name, rules, and prize pool before the registration deadline. Game title, format, and slot limit cannot be edited after tournament creation.
+- Organisers can cancel a tournament before it begins. Cancellation triggers an email notification to all registered players.
+- Organisers can manually start the tournament and trigger bracket generation after the registration deadline closes.
+- Organisers can submit match results for each bracket match.
+- Organisers can declare the final winner.
+
+5. Bracket System
+- The platform must automatically generate brackets on tournament start based on the number of registered players and the selected format.
+- Supported formats: single elimination, double elimination, and round robin.
+- For single and double elimination formats, byes are assigned randomly when the registered player count is not a power of 2.
+- Round robin format pairs every registered player against every other registered player once.
+- Brackets must display visually as an interactive bracket diagram on the tournament detail page showing all rounds.
+- Bracket must update within 30 seconds of a match result being submitted.
+
+6. Leaderboards
+- Each supported game title must have a dedicated leaderboard page.
+- Leaderboard ranks players by total tournament wins descending, with ties broken by total matches played descending.
+- Leaderboard must display rank number, player avatar, username, total wins, and total matches played.
+- Leaderboard displays a minimum of 50 rows per page with pagination for additional entries.
+- Leaderboard must update within 5 minutes of a tournament result being finalised.
+
+7. Notifications
+- Players receive email notifications for: registration confirmation, tournament start, match result submission, and tournament completion.
+- In-platform notification bell icon displaying the count of unread notifications as a badge.
+- Notification history page listing all past notifications for the logged-in user in reverse chronological order.
+
+8. Admin Panel
+- Separate admin dashboard accessible only to platform administrators. Non-admin users attempting to access the admin panel are redirected to the homepage.
+- Admin panel displays a user table with columns for username, email, registration date, and account status.
+- Admins can suspend or delete any user account from the user table.
+- Admins can view and remove any tournament from the tournament management table.
+- Admin dashboard displays total registered users, total tournaments created, and total matches completed as integer values.
+
+9. Supported Game Titles at Launch
+The platform must support the following five game titles at launch:
+- Valorant
+- FIFA
+- Chess
+- Call of Duty
+- Clash Royale
+
+10. Responsive Design
+- All pages must be fully responsive and functional on desktop (1920 x 1080), tablet (768 x 1024), and mobile (375 x 812) screen sizes.
+- No horizontal scrolling on any screen size.
+
+11. Technology Stack
+- Frontend: React.js
+- Backend: Node.js with Express.js
+- Database: MongoDB
+- Authentication: JWT-based session management
+- Hosting: Deployed on a publicly accessible URL (Vercel, Netlify, Railway, or equivalent)
+
+12. Code Quality and Repository Structure
+- The frontend source code must contain src, components, pages, utils, and public subdirectories.
+- The backend source code must contain routes, controllers, models, middleware, and server.js.
+- All source functions must contain inline comments explaining their purpose.
+- README.md must contain the project title, tech stack, local setup instructions, environment variable list, and deployed URL.
+- The GitHub repository must be public and accessible without login.
+
+Out of Scope:
+- Native mobile applications (iOS or Android)
+- Live video streaming of matches
+- In-platform chat or messaging between users
+- Payment gateway integration or prize pool collection of any kind — prize pool is a display field only
+- Third-party game API integration for automatic result verification
+- Multi-language support
